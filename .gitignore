@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+.bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -28,7 +28,9 @@
 
 /public/packs
 /public/packs-test
+/public/uploads
 /node_modules
+/vendor/
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
@@ -43,10 +45,8 @@ yarn-debug.log*
 /config/mongoid.yml
 /config/database.yml
 /config/master.key
-**.orig
-*.old
-*.bak
-*~
-.env
-.byebug_history
-.DS_Store
+
+# Ignore specific files for Clacky
+.1024*
+!.1024
+.breakpoints
