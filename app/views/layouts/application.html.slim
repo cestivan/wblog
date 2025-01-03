@@ -21,6 +21,10 @@ html
     = javascript_pack_tag 'ga', 'data-turbo-track': 'reload'
     = favicon_link_tag asset_pack_path("media/images/favicon.png")
   body class=body_class
+    #notification-bar.d-none
+      .container
+        span.message= ENV['NOTIFICATION_MESSAGE']
+        button.close-btn aria-label='Close' ×
     - if content_for?(:main)
       = yield(:main)
     - else
