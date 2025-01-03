@@ -8,15 +8,16 @@ class CommentsController < ApplicationController
     @post = Post.find( params[:blog_id] )
     @comments = @post.comments.order(created_at: :desc)
 
-    # # 某些原因暂时关闭评论
-    flash.now[:notice] = '评论功能未开放'
-    return
-
     @comment = @post.comments.build(comment_params)
     if @comment.save
       flash.now[:notice] = '发表成功'
       # 重置评论
       @comment = Comment.new
+    else
+      if @comment.errors[:content]&.include?('contains sensitive word')
+        flash.now[:error] = '评论包含敏感词,请修改后重试'
+        render status: 422
+      end
     end
   end
 
