@@ -1,6 +1,9 @@
 # This section MUST be configured
 SITE_NAME: "WinDy's Blog"
 
+# Configure the notification message shown in top bar
+NOTIFICATION_MESSAGE: '设置此处显示的通知消息'
+
 # domain name used by action cable
 DOMAIN: ''
 PROTOCOL: http
