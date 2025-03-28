@@ -4,6 +4,11 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Clacky-related configuration
+.1024*
+!.1024
+.breakpoints
+
 # Ignore bundler config.
 /.bundle
 

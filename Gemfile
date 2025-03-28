@@ -42,7 +42,7 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'mini_magick'
 gem 'html_truncator'
-gem 'nokogiri'
+gem 'nokogiri', '~> 1.18.6'
 
 gem 'figaro'
 gem 'simple_form', '~> 5.0'
